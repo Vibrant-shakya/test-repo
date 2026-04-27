@@ -16,5 +16,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag test-image:latest
+        docker build . --file Dockerfile --tag vibrantshakya/test-repo:test-image
         docker push vibrantshakya/test-repo:test-image
