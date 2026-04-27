@@ -17,4 +17,3 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag test-image:latest
-        docker push vibrantshakya/test-repo:my-image-name:latest
