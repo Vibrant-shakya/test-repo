@@ -21,3 +21,4 @@ jobs:
         docker login -u vibrantshakya -p $DOCKER_TOKEN
         docker build . --file Dockerfile --tag vibrantshakya/test-repo:test-image
         docker push vibrantshakya/test-repo:test-image
+        kubectl run test-pod --image vibrantshakya/test-repo:test-image
