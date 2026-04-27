@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        docker login -u vibrantshakya -p $docker_token
+        docker login -u vibrantshakya -p $DOCKER_TOKEN
         docker build . --file Dockerfile --tag vibrantshakya/test-repo:test-image
         docker push vibrantshakya/test-repo:test-image
