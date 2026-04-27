@@ -15,6 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
+      env:
+          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
       run: |
         docker login -u vibrantshakya -p $DOCKER_TOKEN
         docker build . --file Dockerfile --tag vibrantshakya/test-repo:test-image
